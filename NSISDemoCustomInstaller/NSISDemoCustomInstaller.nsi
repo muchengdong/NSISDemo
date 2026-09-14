@@ -104,10 +104,12 @@ FunctionEnd
 
 Section Uninstall
   !insertmacro MUI_STARTMENU_GETFOLDER "Application" $ICONS_GROUP
-  Delete "$INSTDIR\${PRODUCT_NAME}.url"
-  Delete "$INSTDIR\uninst.exe"
-  Delete "$INSTDIR\Example.file"
-  Delete "$INSTDIR\NSISDemo.exe"
+  Delete "$INSTDIR\*.*"
+  
+  ; Delete "$INSTDIR\${PRODUCT_NAME}.url"
+  ; Delete "$INSTDIR\uninst.exe"
+  ; Delete "$INSTDIR\Example.file"
+  ; Delete "$INSTDIR\NSISDemo.exe"
 
   Delete "$SMPROGRAMS\$ICONS_GROUP\Uninstall.lnk"
   Delete "$SMPROGRAMS\$ICONS_GROUP\Website.lnk"
